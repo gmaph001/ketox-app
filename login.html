@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+       body
+       {
+         font-family: arial;
+         overflow-y: hidden;
+         overflow-x: hidden;
+         background-color: rgb(254, 253, 249);
+       }
+       input
+       {
+         width: 30%;
+         height: 30px;
+         font-size: 15px;
+         border-radius: 5px;
+         border: solid 1px black;
+       }
+       button
+       {
+        width: 30%;
+        height: 40px;
+        background-color: #FF474C;
+        border:  #FF474C;
+        color: white;
+        font-size: 18px;
+        border-radius: 6px;
+        cursor: pointer;
+       }
+       button:hover
+       {
+        opacity:0.9;
+        box-shadow: 2px 0px 2px 1px #FF474C;
+       }
+        div
+        {
+            padding: 0px;
+            width: 100%;
+            float: left;
+        }
+        .main
+        {
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+            height: 100dvh;
+        }
+        .left
+        {
+            float: left;
+            background-image: url("newbg.png");
+            background-color: rgba(255, 255, 255, 0.4);
+            background-size: cover;
+            box-shadow: 100px 0px 2000px rgba(0, 0, 0, 0.4);
+            opacity: 0.9;
+            border: solid 1px rgb(89, 89, 167);
+            width: 65%;
+            height: 110%;
+            padding: 20px 30px;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            margin-left: -8px;
+            margin-top: -7px;
+            margin-bottom: 8px;
+            overflow-y: hidden;
+            z-index: -1;
+            transform: translateX(-100%);
+            animation: slideInLeft 1s ease forwards;
+        }
+        @keyframes slideInLeft
+        {
+            to 
+            {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .right
+        {
+            float: left;
+            width: 100%;
+            height: 50px;
+            padding: 0%;
+        }
+        .info
+        {
+            margin-top: -32%;
+            margin-left: 28%;
+            width: 140%;
+            transform: translateX(100%);
+            animation: slideInRight 1s ease forwards;
+        }
+        @keyframes slideInRight
+        {
+            to
+            {
+                opacity: 1;
+                transform: translateX(0);
+            }
+        }
+        .signup
+        {
+            color: #FF474C;
+        }
+        .signup:hover
+        {
+            opacity: 0.8;
+        }
+        .welcome
+        {
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            color:white;
+            font-size: 70px; 
+            margin-top: 310px; 
+            margin-right: 20px; 
+            text-shadow: 2px 4px #FF474C; 
+            font-family: verdana;
+            transform: translateY(100%);
+            animation: slideUp 1s ease forwards;
+        }
+        .welcome:hover
+        {
+            font-size: 75px;
+            transition: ease-out 0.5s;
+        }
+        @keyframes slideUp
+        {
+            to
+            {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .password
+        {
+            text-decoration: none;
+            color: #FF474C;
+        }
+        .password:hover
+        {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <div class="main">
+        <div class="left">
+            <center><h1 class="welcome">Welcome<br> Back</h1></center>
+        </div>
+        <div class="right">
+            <div class="info">
+                <h1><b style="font-size: 60px; font-family: verdana; margin-left: 85px; color: #FF474C;">Login</b></h1><br>
+                <hr style="width: 30%; height: 0.1%; margin-left: -2px; margin-bottom: 20px;" color="#FF474C"><br>
+                <p style="color:grey; font-size: 20px;">Welcome back! Please login to your account</p><br><br>
+                <form>
+                <span style="font-size: 20px; font-style: arial;">Username:</span><br><br><input type="text" placeholder="Your Username here" required>
+                <br><br>
+                <span style="font-size: 20px; font-style: arial;">Password:</span><br><br>
+                <input type="password" placeholder="Your password here" maxlength="10" minlength="8" required><br><br>
+                <a href="signup.html" style="font-size: 12px; opacity: 0.8;" class="password">Forgot Password?</a><br><br>
+                <button type="submit" onclick="function1()">Login</button><br><br>
+                <span style="font-size: 13px; color: grey; opacity: 0.8;">Don't have an account?<a href="signup.html" class="signup"> Sign Up</a></span>
+                </form>
+            </div>    
+        </div>
+    </div>
+    <script>
+        function function1()
+        {
+            // window.location.href="";
+
+        }
+        
+    </script>
+</body>
+</html>
