@@ -1,0 +1,178 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700&display=swap');
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    text-decoration: none;
+    transition: 0.25s linear;
+    scrollbar-width: thin;
+    scrollbar-color: #888 transparent;
+  }
+  html {
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding: 9rem;
+    scroll-behavior: smooth;
+
+
+  }
+
+  html::-webkit-scrollbar {
+    width: 8rem;
+  }
+  
+  html::-webkit-scrollbar {
+    width: 8rem;
+  }
+  
+  html::-webkit-scrollbar-track {
+    background: transparent;
+  }
+  
+  html::-webkit-scrollbar-thumb {
+    background: #000000;
+    border-radius: 5rem;
+  }
+  .login{
+    
+    /* height:100%; */
+    margin: 10rem 25rem 0rem 25rem;
+    
+    background-color:#FF474C;
+    position: relative;
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.7);
+    display: flex;
+    border-radius: 2rem;
+  }
+  .content{
+        width: 50%;
+        background-color: #fff;
+        justify-items: center;
+        border-top-left-radius: 2rem;
+        border-bottom-left-radius: 2rem;
+        /* height: 100%; */
+  }  
+  .content h1{
+    font-size:4rem ;
+    font-weight: 600 ;
+    padding-top: 5rem; 
+    color: #FF474C; 
+  }
+  .content .social_links{
+    justify-items: center;
+    justify-content: space-between;
+    margin-top: 2.5rem;
+    display: inline-block;
+    margin-bottom: 3.5rem;  
+  }
+  .content .social_links a{
+    display: inline-block;
+    height: 40px;
+    width: 40px;
+    background-color:  #FF474C;
+    margin: 0 6px 0 6px;
+    text-align: center;
+    line-height: 40px;
+    border-radius: 50%;
+    color: #fff;
+    transition:all 0.5s ease;
+    /* box-shadow: 0 0 20px 0px rgba(0,0,0,0.7); */
+  }
+  .footer-col .social-links a:hover{
+    color: #24262b;
+    background-color: rgba(255, 255, 255, .2);
+  }
+  
+ .login .content .form{
+   
+    padding-top: .5rem;
+    margin-top: 3rem;  
+  }
+  .login .content .form input{
+   
+    padding: .8rem;
+    outline: none;
+    border: none;
+    border-bottom:2px solid #888;
+    font-size: 15px;
+    height: 100%;
+    width: 105%;
+    font-weight: 400;
+  }
+ 
+  .login .content .form .forgot{
+    color: #888;  
+    padding-left:5rem;
+  }
+  .login .content .form .forgot:hover{
+    color: #24262b;
+    cursor: pointer;
+  }
+ 
+  .sign_btn {
+ 
+    display: grid;
+    text-decoration: none;
+    color: #fff;
+    background-color: #FF474C;
+    border: 1px solid #FF474C;
+    margin-top: 1.5rem;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    padding: 12px 24px;
+    border-radius: 20px;
+    position: relative;
+    cursor: pointer;
+    justify-items: center;
+  }
+  .sign_btn:hover{
+    box-shadow: 0 0 20px 0px rgba(0,0,0,0.7);
+  }
+  .login .content_1{
+    width: 50%;
+    flex: 1;
+    
+  }
+  .login .content_1 h1{
+    font-size:3.7rem ;
+    font-weight: 600 ;
+    padding-top: 10rem;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+  }
+  .login .content_1 p{
+    font-size:1.5rem ;
+    font-weight:normal;
+    padding: 2rem;
+    width: 100%;
+    color: #fff;
+    text-align: center;
+    line-height: 1.8;
+  }
+  .login .content_1 a{
+    display: grid;
+
+    text-decoration: none;
+    color: #fff;
+    background-color: #24262b;
+    border: 1px solid #fff;
+    text-align: center;
+    padding: 12px ;
+    border-radius: 20px;
+    cursor: pointer;
+    background: transparent;
+   justify-items: center;
+   margin: 0 auto;
+   width: 135px;
+
+}
+  
+
+.login .content_1 a:hover{
+  border: 1px solid #fff;
+  background: #fff;
+  color: #24262b;
+  transition: 1s;
+}
