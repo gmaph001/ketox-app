@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="ketox-app/IMAGES/LOGO/ketox-logo.png">
+    <title>Sign Up</title>
+    <style>
+        body
+        {
+            overflow: hidden; 
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: cover;
+            background: linear-gradient(to left, #ff474c 67%, white 38%);
+        }
+        div
+        {
+            float: right;
+            width: 100%;
+        }
+        fieldset
+        {
+            width: 400px;
+            height: 555px;
+            background-color: white;
+            margin-left: 260px;
+            margin-top: 70px;
+            border: white;
+            box-shadow: 0px 0px 12px 12px rgba(0,0,0,0.2);
+            font-size: 21px;
+            font-family:  'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 1.5px;
+            color: black;
+            border-radius: 4px;
+            transform: translatex(-1000px); 
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        fieldset.animate 
+        {
+            opacity: 1; 
+            transform: translateY(0);
+        }
+        fieldset.error
+        {
+            background-color: #f5dede;
+        }
+        input
+        {
+            height: 40px;
+            width: 270px;
+            border-color: rgb(221, 215, 215);
+            border-radius: 5px;
+            font-size: 17px;
+            font-family:  'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 1px;
+            background-color: #fff9f9;
+            padding-left:38px;
+        }
+        #uname
+        {
+            background-image: url(uname.png);
+            background-size: 23px 23px;
+            background-repeat: no-repeat;
+            background-position: left 7px top 10px;
+        }
+        #email
+        {
+            background-image: url(emailpng.png);
+            background-size: 38px 38px;
+            background-repeat: no-repeat;
+            background-position: left 0px top 1px;
+        }
+        #pword
+        {
+            background-image: url(pwordnew.png);
+            background-size: 28px 28px;
+            background-repeat: no-repeat;
+            background-position: left 4px top 6px;
+        }
+        #cpword
+        {
+            background-image: url(cpword.png);
+            background-size: 30px 28px;
+            background-repeat: no-repeat;
+            background-position: left 3px top 6px;
+        }
+        .signup
+        {
+            margin-top: -23px;
+            padding: 10%;
+        }
+        .button_signup
+        {
+            background-color: #ff474c;
+            border: solid 2px rgb(233, 38, 38);
+            border-radius: 6px;
+            width: 140px;
+            height: 40px;
+            font-size: 22px;
+            color: white;
+            margin-left: 0px;
+            margin-top: -16px;
+            font-family: 'Arial ', Arial, sans-serif;
+            font-weight: lighter;
+            letter-spacing: 1px;
+            box-shadow: 0px 0px 6px 0px #ff474c;
+        }
+        .button_signup:hover
+        {
+            background-color: #f9353b;
+            transition: 0.2s ease;
+            width: 136px;
+            height: 38px;
+            font-size: 21px;
+        }
+        .right
+        {
+            width: 60%;
+            height: 100%;
+            color: white;
+            font-size: 70px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            letter-spacing: -1px;
+            margin-right: -10px;
+            margin-top: -700px;
+            transform: translateX(-1000px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
+        }
+        .right.animate 
+        {
+            opacity: 1;
+            transform: translateX(0);
+        }
+        .welcome
+        {
+            letter-spacing: -8px;
+            margin-top: 100px;
+        }
+        .info
+        {
+            margin-right: -60px;
+            margin-bottom: 20%;
+            padding: 20px;
+        }
+        hr
+        {
+            width: 450px;
+            height: 0px;
+            margin-top: -10px;
+        }
+        .first
+        {
+            width: 200px;
+            height: 0px;
+        }
+        .account
+        {
+            font-size: 13px;
+            color: rgb(113, 112, 112);
+            padding: 10px;
+        }
+        .login
+        {
+            color: #ff474c;
+        }
+        .login:hover
+        {
+            color: #ff0066;
+        }
+       </style>
+    </head>
+    <body>
+            <fieldset id="Form">
+                <center>
+                    <p style="font-size: 40px; font-family: 'Courier New', Courier, monospace; letter-spacing: -2px; margin-top: 25px;">Sign Up</p>
+                    <hr class="first" color="#FF474C">
+                    <form id="signup_form">
+                    <span class="signup">
+                        <br><br>
+                        <input type="text" placeholder="Username" id="uname" required><br><br>
+                        <input type="email" placeholder="Email" id="email" required><br><br>
+                        <input type="password" placeholder="Password" id="pword" maxlength="10" minlength="8" required><br><br>
+                        <input type="password" placeholder="Confirm password"id="cpword" maxlength="10" minlength="8" required><br><br><br>
+                        <button type="button" class="button_signup" onclick="send()" id="signup" disabled>Sign Up</button><br>
+                        <p class="account">Already have an account?<a href="login.html" class="login">Login</a></p>
+                    </span>
+                    </form>
+                </center>
+            </fieldset>
+        <div class="right" id="RightPanel">
+            <div class="info"><br><br>
+                <p class="welcome">Welcome to Ketox</p>
+                <hr color="white">
+                <span style="font-size: 29px; color:rgb(247, 242, 242); font-family: 'Times New Roman', Times, serif; letter-spacing: 1px;">"Facilities at your convenience..."</span><br><br>
+                <span style="font-size: 10px; color: #ffff; font-family: sans-serif; letter-spacing: 2px;">&copy;All rights reserved</span>
+            </div>
+        </div>
+        <script>
+        window.onload = function () {
+        let form = document.getElementById("Form");
+        let rightPanel = document.getElementById("RightPanel");
+        let uname = document.getElementById("uname");
+        let email = document.getElementById("email");
+        let pword = document.getElementById("pword");
+        let cpword = document.getElementById("cpword");
+        let sign_up = document.getElementById("signup");
+
+        form.classList.add("animate");
+        rightPanel.classList.add("animate");
+
+        sign_up.disabled = true;
+        sign_up.style.cursor = "not-allowed";
+        sign_up.style.backgroundColor = "#ffcccc";
+        sign_up.style.borderColor = "#ffcccc";
+        sign_up.style.boxShadow = "none";
+
+        function validate_form() 
+        {
+            let username = uname.value.trim();
+            let emailValue = email.value.trim();
+            let password = pword.value.trim();
+            let confirmPassword = cpword.value.trim();
+            let isValid = true;
+
+            if (!emailValue.includes("@")) 
+            {
+                form.classList.add("error");
+                isValid = false;
+            }
+
+            if (password.length < 8 || password !== confirmPassword) 
+            {
+                form.classList.add("error");
+                isValid = false;
+            }
+
+            if (username && emailValue.includes("@") && password.length >= 8 && password === confirmPassword) 
+            {
+                sign_up.disabled = false;
+                sign_up.style.cursor = "pointer";
+                sign_up.style.backgroundColor = "#ff474c";
+                sign_up.style.borderColor = "#e60026";
+                sign_up.style.boxShadow = "0px 0px 6px 0px #ff474c";
+
+                uname.style.backgroundColor = "#e6ffe6";
+                email.style.backgroundColor = "#e6ffe6";
+                pword.style.backgroundColor = "#e6ffe6";
+                cpword.style.backgroundColor = "#e6ffe6";
+                form.classList.remove("error"); 
+            } 
+            else 
+            {
+                sign_up.disabled = true;
+                sign_up.style.cursor = "not-allowed";
+                sign_up.style.backgroundColor = "#ffcccc";
+                sign_up.style.borderColor = "#ffcccc";
+                sign_up.style.boxShadow = "none";
+
+                uname.style.backgroundColor = "#fff9f9";
+                email.style.backgroundColor = "#fff9f9";
+                pword.style.backgroundColor = "#fff9f9";
+                cpword.style.backgroundColor = "#fff9f9";
+            }
+        }
+
+        function send() 
+        {
+            let password = pword.value.trim();
+            let confirmPassword = cpword.value.trim();
+
+            if (password !== confirmPassword) 
+            {
+                form.classList.add("error");
+            } 
+            else 
+            {
+                form.classList.remove("error");
+                window.location.href = "ketox-app/uni1.html";
+            }
+        }
+
+        uname.addEventListener("input", validate_form);
+        email.addEventListener("input", validate_form);
+        pword.addEventListener("input", validate_form);
+        cpword.addEventListener("input", validate_form);
+        sign_up.addEventListener("click", send);
+    };   
+        </script>
+    </body>
+</html>
