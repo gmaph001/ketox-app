@@ -3,180 +3,334 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login</title>
+    <link rel="icon" href="ketox-app/IMAGES/LOGO/ketox-logo.png">
+    <title>Log In</title>
     <style>
-       body
-       {
-         font-family: arial;
-         overflow-y: hidden;
-         overflow-x: hidden;
-         background-color: rgb(254, 253, 249);
-       }
-       input
-       {
-         width: 30%;
-         height: 30px;
-         font-size: 15px;
-         border-radius: 5px;
-         border: solid 1px black;
-       }
-       button
-       {
-        width: 30%;
-        height: 40px;
-        background-color: #FF474C;
-        border:  #FF474C;
-        color: white;
-        font-size: 18px;
-        border-radius: 6px;
-        cursor: pointer;
-       }
-       button:hover
-       {
-        opacity:0.9;
-        box-shadow: 2px 0px 2px 1px #FF474C;
-       }
+        body
+        {
+            overflow: hidden; 
+            background-repeat: no-repeat;
+            background: linear-gradient(to left, #ff474c 67%, white 38%);
+        }
         div
         {
-            padding: 0px;
+            float: right;
             width: 100%;
-            float: left;
         }
-        .main
+        fieldset
         {
-            display: flex;
-            align-items: center;
-            justify-content: space-evenly;
-            height: 100dvh;
+            width: 400px;
+            height: 555px;
+            background-color: white;
+            /* background: linear-gradient(to top left, rgb(204, 255, 230) 0%, rgb(255, 204, 217)); */
+            margin-left: 260px;
+            margin-top: 70px;
+            border: white;
+            box-shadow: 0px 0px 12px 12px rgba(0,0,0,0.2);
+            font-size: 21px;
+            font-family:  'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 1.5px;
+            color: black;
+            border-radius: 4px;
+            transform: translateX(1000px); 
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        .left
+        fieldset.animate 
         {
-            float: left;
-            background-image: url("newbg.png");
-            background-color: rgba(255, 255, 255, 0.4);
-            background-size: cover;
-            box-shadow: 100px 0px 2000px rgba(0, 0, 0, 0.4);
-            opacity: 0.9;
-            border: solid 1px rgb(89, 89, 167);
-            width: 65%;
-            height: 110%;
-            padding: 20px 30px;
+            opacity: 1; 
+            transform: translateY(0);
+        }
+        fieldset.error
+        {
+            background-color: #f5dede;
+        }
+        input
+        {
+            height: 50px;
+            width: 270px;
+            border-color: rgb(221, 215, 215);
+            border-radius: 5px;
+            font-size: 17px;
+            font-family:  'Arial Narrow', Arial, sans-serif;
+            letter-spacing: 1px;
+            background-color: #fff9f9;
+            padding-left:38px;
+        }
+        #uname
+        {
+            background-image: url(uname.png);
+            background-size: 23px 23px;
             background-repeat: no-repeat;
-            background-attachment: fixed;
-            margin-left: -8px;
-            margin-top: -7px;
-            margin-bottom: 8px;
-            overflow-y: hidden;
-            z-index: -1;
-            transform: translateX(-100%);
-            animation: slideInLeft 1s ease forwards;
+            background-position: left 7px top 14px;
+            margin-top: 0px;
         }
-        @keyframes slideInLeft
+        #pword
         {
-            to 
-            {
-                opacity: 1;
-                transform: translateX(0);
-            }
+            background-image: url(pwordnew.png);
+            background-size: 28px 28px;
+            background-repeat: no-repeat;
+            background-position: left 4px top 12px;
+        }
+        .checkbox
+        {
+            width: 15px;
+            height: 15px;
+            background-color: blue;
+            font-family: sans-serif;
+        }
+        .login
+        {
+            margin-top: 500px;
+            padding: 10%;
+        }
+        .button_login
+        {
+            background-color: #ff474c;
+            border: solid 2px rgb(233, 38, 38);
+            border-radius: 6px;
+            width: 140px;
+            height: 40px;
+            font-size: 22px;
+            color: white;
+            margin-left: 0px;
+            margin-bottom: -10px;
+            font-family: 'Arial ', Arial, sans-serif;
+            font-weight: lighter;
+            letter-spacing: 1px;
+            box-shadow: 0px 0px 6px 0px #ff474c;
+        }
+        .button_login:hover
+        {
+            background-color: #f9353b;
+            transition: 0.2s ease;
+            width: 136px;
+            height: 38px;
+            font-size: 21px;
         }
         .right
         {
-            float: left;
-            width: 100%;
-            height: 50px;
-            padding: 0%;
+            width: 60%;
+            height: 100%;
+            color: white;
+            font-size: 70px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            font-family: 'Courier New', Courier, monospace, sans-serif;
+            letter-spacing: -1px;
+            margin-left: 80px;
+            margin-top: -700px;
+            transform: translateX(1000px);
+            transition: opacity 0.8s ease, transform 0.8s ease;
         }
-        .info
+        .right.animate 
         {
-            margin-top: -32%;
-            margin-left: 28%;
-            width: 140%;
-            transform: translateX(100%);
-            animation: slideInRight 1s ease forwards;
-        }
-        @keyframes slideInRight
-        {
-            to
-            {
-                opacity: 1;
-                transform: translateX(0);
-            }
-        }
-        .signup
-        {
-            color: #FF474C;
-        }
-        .signup:hover
-        {
-            opacity: 0.8;
+            opacity: 1;
+            transform: translateX(0);
         }
         .welcome
         {
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            color:white;
-            font-size: 70px; 
-            margin-top: 310px; 
-            margin-right: 20px; 
-            text-shadow: 2px 4px #FF474C; 
-            font-family: verdana;
-            transform: translateY(100%);
-            animation: slideUp 1s ease forwards;
+            letter-spacing: -8px;
+            margin-top: 100px;
         }
-        .welcome:hover
+        .info
         {
-            font-size: 75px;
-            transition: ease-out 0.5s;
+            margin-right: -90px;
+            margin-top: -10px;
+            padding: 20px;
         }
-        @keyframes slideUp
+        hr
         {
-            to
+            width: 450px;
+            height: 0px;
+            margin-top: -25px;
+        }
+        .first
+        {
+            width: 200px;
+            height: 0px;
+        }
+        .account
+        {
+            font-size: 13px;
+            color: rgb(113, 112, 112);
+            padding: 10px;
+        }
+        .loginn
+        {
+            color: #ff474c;
+        }
+        .loginn:hover
+        {
+            color: #ff0066;
+        }
+        @media screen and (max-width: 1200px) 
+        {
+            fieldset 
             {
-                opacity: 1;
-                transform: translateY(0);
+                margin-left: auto;
+                margin-right: auto;
+                transform: none;
+                width: 80%;
+            }
+
+            .right 
+            {
+                font-size: 40px;
+                width: 100%;
             }
         }
-        .password
+        @media screen and (max-width: 768px) 
         {
-            text-decoration: none;
-            color: #FF474C;
-        }
-        .password:hover
-        {
-            text-decoration: underline;
-        }
-    </style>
-</head>
-<body>
-    <div class="main">
-        <div class="left">
-            <center><h1 class="welcome">Welcome<br> Back</h1></center>
-        </div>
-        <div class="right">
-            <div class="info">
-                <h1><b style="font-size: 60px; font-family: verdana; margin-left: 85px; color: #FF474C;">Login</b></h1><br>
-                <hr style="width: 30%; height: 0.1%; margin-left: -2px; margin-bottom: 20px;" color="#FF474C"><br>
-                <p style="color:grey; font-size: 20px;">Welcome back! Please login to your account</p><br><br>
-                <form>
-                <span style="font-size: 20px; font-style: arial;">Username:</span><br><br><input type="text" placeholder="Your Username here" required>
-                <br><br>
-                <span style="font-size: 20px; font-style: arial;">Password:</span><br><br>
-                <input type="password" placeholder="Your password here" maxlength="10" minlength="8" required><br><br>
-                <a href="signup.html" style="font-size: 12px; opacity: 0.8;" class="password">Forgot Password?</a><br><br>
-                <button type="submit" onclick="function1()">Login</button><br><br>
-                <span style="font-size: 13px; color: grey; opacity: 0.8;">Don't have an account?<a href="signup.html" class="signup"> Sign Up</a></span>
-                </form>
-            </div>    
-        </div>
-    </div>
-    <script>
-        function function1()
-        {
-            // window.location.href="";
+            body 
+            {
+                background: linear-gradient(to top, #ff474c 50%, white 50%);
+                overflow: auto;
+            }
 
+            fieldset 
+            {
+                width: 90%;
+                margin-top: 20px;
+                box-shadow: 0px 0px 8px 8px rgba(0,0,0,0.1);
+            }
+
+            .right 
+            {
+                font-size: 30px;
+                margin-top: 20px;
+            }
+
+            input 
+            {
+                width: 85%;
+            }
+
+            .button_login 
+            {
+                width: 90%;
+            }
         }
-        
-    </script>
-</body>
+        @media screen and (max-width: 180px) 
+        {
+            fieldset 
+            {
+                width: 100%;
+                margin: 10px auto;
+                box-shadow: 0px 0px 4px 4px rgba(0,0,0,0.1);
+            }
+
+            .right 
+            {
+                font-size: 25px;
+                margin-top: 10px;
+            }
+
+            .button_login 
+            {
+                font-size: 18px;
+                padding: 10px;
+            }
+        }
+       </style>
+    </head>
+    <body>
+            <fieldset id="Form">
+                <center>
+                    <br>
+                    <p style="font-size: 40px; font-family: 'Courier New', Courier, monospace; letter-spacing: -2px; margin-top: 25px;">Log In</p><br>
+                    <hr class="first" color="#FF474C">
+                    <form id="signup_form">
+                    <span class="login">
+                        <br><br>
+                        <input type="text" placeholder="Username" id="uname" required><br><br><br>
+                        <input type="password" placeholder="Password" id="pword" maxlength="10" minlength="8" required><br><br>
+                        <input type="checkbox" class="checkbox" checked> <span style="font-size: 15px; color:blue; margin-right: 185px;">Remember me</span><br><br>
+                        <button type="button" class="button_login" onclick="send()" id="login" disabled>Login</button><br><br>
+                        <p class="account">Don't have an account?<a href="signup.html" class="loginn">Sign up</a></p>
+                    </span>
+                    </form>
+                </center>
+            </fieldset>
+        <div class="right" id="RightPanel">
+            <div class="info"><br><br><br>
+                <p class="welcome">Welcome back</p>
+                <hr color="white"><br>
+                <span style="font-size: 10px; color: #ffff; font-family: sans-serif; letter-spacing: 2px;">&copy;All rights reserved</span>
+            </div>
+        </div>
+        <script>
+            window.onload = function () {
+                let form = document.getElementById("Form");
+                let rightPanel = document.getElementById("RightPanel");
+                let uname = document.getElementById("uname");
+                let pword = document.getElementById("pword");
+                let log_in = document.getElementById("login");
+
+                form.classList.add("animate");
+                rightPanel.classList.add("animate");
+
+                log_in.disabled = true;
+                log_in.style.cursor = "not-allowed";
+                log_in.style.backgroundColor = "#ffcccc";
+                log_in.style.borderColor = "#ffcccc";
+                log_in.style.boxShadow = "none";
+
+                function validate_form() 
+                {
+                    let f = document.getElementById("Form");
+                    let u = document.getElementById("uname").value.trim();
+                    let p = document.getElementById("pword").value.trim();
+                    let unameField = document.querySelector("#uname");
+                    let pwordField = document.querySelector("#pword");
+
+                    if (u === "" || p === "") 
+                    {
+                        log_in.disabled = true;
+                        log_in.style.cursor = "not-allowed";
+                        log_in.style.backgroundColor = "#ffcccc";
+                        log_in.style.borderColor = "#ffcccc";
+                        log_in.style.boxShadow = "none";
+                        f.classList.remove("error");
+                        unameField.style.backgroundColor = "#fff9f9"; 
+                        pwordField.style.backgroundColor = "#fff9f9"; 
+                    } 
+                    else 
+                    {
+                        if (p.length >= 8) 
+                        {
+                            log_in.disabled = false;
+                            log_in.style.cursor = "pointer";
+                            log_in.style.backgroundColor = "#ff474c";
+                            unameField.style.backgroundColor = "#e6ffe6"; // Green for valid input
+                            pwordField.style.backgroundColor = "#e6ffe6"; // Green for valid input
+                            f.classList.remove("error");
+                        }
+                        else 
+                        {
+                            log_in.disabled = true;
+                            log_in.style.cursor = "not-allowed";
+                            log_in.style.backgroundColor = "#ffcccc";
+                            log_in.style.borderColor = "#ffcccc";
+                            log_in.style.boxShadow = "none";
+                            unameField.style.backgroundColor = "#fff9f9"; // Reset to white
+                            pwordField.style.backgroundColor = "#fff9f9"; // Reset to white
+                            f.classList.add("error");
+                        }
+                    }
+                }
+
+                function send()
+                {
+                   
+                    window.location.href = "ketox-app/uni1.html";
+                    
+                }
+
+                uname.addEventListener("input", validate_form);
+                pword.addEventListener("input", validate_form);
+                log_in.addEventListener("click", send);
+        };
+        </script>
+    </body>
 </html>
